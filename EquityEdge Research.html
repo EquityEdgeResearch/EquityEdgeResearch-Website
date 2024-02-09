@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Personal Website</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <style>
+         /* CSS for the video container */
+         #video-container {
+            position: relative; /* Set the position to relative */
+            width: 100%; /* Set width to 100% */
+            height: 500px; /* Set the height of the video container */
+            overflow: hidden; /* Hide overflowing content */
+         }
+
+         /* CSS for the video background */
+         #video-background {
+            position: absolute; /* Set the position to absolute */
+            width: 100%; /* Set width to 100% */
+            height: auto; /* Maintain aspect ratio */
+            z-index: -1; /* Set z-index to move behind other content */
+         }
+
+         /* Style for the dropdown content */
+         .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+         }
+
+         /* Style for the dropdown links */
+         .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+         }
+
+         /* Style for the dropdown links on hover */
+         .dropdown-content a:hover {
+            background-color: #ddd;
+         }
+
+         /* Show the dropdown content on hover */
+         .dropdown:hover .dropdown-content {
+            display: block;
+         }
+
+         /* Ensure equal spacing for navigation links */
+         nav {
+            display: flex;
+            align-items: center;
+         }
+
+         nav a {
+            margin-right: 20px;
+         }
+
+         /* CSS for title and navigation */
+         header {
+            background-color: #333; /* Lighter shade of black */
+            padding: 10px 0; /* Add padding */
+            text-align: left;
+            font-family: 'Old Standard TT', serif;
+            color: white; /* Change text color to white */
+         }
+
+         h1, nav a {
+            font-size: 28px; /* Increase font size for title */
+            color: white; /* Change text color to white */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Ensure the background covers the whole title */
+            padding: 10px 20px; /* Add padding */
+            font-family: 'Old Standard TT', serif; /* Set font family */
+         }
+
+         nav {
+            display: inline-block;
+            margin-left: 40px; /* Increase left margin for navigation */
+         }
+
+         nav a {
+            margin-right: 20px; /* Increase right margin for navigation links */
+            font-size: 18px; /* Adjust font size for navigation links */
+            cursor: pointer; /* Change cursor to pointer */
+         }
+
+         body {
+            background-color: #e9f5ff; /* Faint blue background */
+         }
+
+
+         .welcome-message {
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            margin-left: 250px; /* Add left margin */
+            margin-right: 60px; /* Add right margin */
+            margin-top: 100px;
+         }
+        
+
+         .welcome-message img {
+            margin-right: 200px; /* Add margin to the right of the image */
+            max-width: 400px; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 100px;
+         }
+        
+         .welcome-message img {
+            opacity: 0.7;
+            max-width: 400px;
+            height: auto;
+            margin-top: 100px;
+
+         }
+         .welcome-message div {
+            flex-grow: 1; /* Allow the div to grow to fill the available space */
+         }
+         .welcome-message h2 {
+            font-size: 30px; /* Set font size for heading */
+            font-family: 'Mercury', sans-serif; /* Set font family for h2 */
+            margin-bottom: 20px; /* Add margin to separate heading from paragraph */
+            margin-left: 20px;
+            margin-top: 100px;
+         }
+
+         .welcome-message p {
+            font-size: 16px; /* Set font size for paragraph */
+            font-family: 'Times New Roman', serif; /* Set font family for p */
+            line-height: 1.6; /* Increase line height for better readability */
+            margin-left: 20px;
+            margin-right: 100px;
+         }
+
+         /* Additional welcome message section */
+         .welcome-message-left {
+            margin-left: 0px; /* Adjust left margin */
+            margin-right: 200px; /* Adjust right margin */
+            display: flex; /* Use flexbox to align items */
+            align-items: center; /* Center items vertically */
+            margin-top: 100px;
+         }
+
+         .welcome-message-left img {
+            margin-left: 20px; /* Add margin to the left of the image */
+            max-width: 400px; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 100px;
+         }
+         .welcome-message-left img {
+            opacity: 0.8;
+            max-width: 400px;
+            height: auto;
+            margin-top: 10px;
+
+         }
+         .welcome-message-left h2 {
+            font-size: 30px; /* Set font size for heading */
+            font-family: 'Mercury', sans-serif; /* Set font family for h2 */
+            margin-bottom: 20px; /* Add margin to separate heading from paragraph */
+            margin-left: 230px;
+            margin-top: 10px;
+         }
+
+         .welcome-message-left p {
+            font-size: 16px; /* Set font size for paragraph */
+            font-family: 'Times New Roman', serif; /* Set font family for p */
+            line-height: 1.6; /* Increase line height for better readability */
+            text-align: left; /* Align text to the left */
+            margin-right: 150px;
+            margin-left: 230px;
+         }
+      </style>
+   </head> 
+   <body>
+      <header>   
+         <h1>EquityEdge Research</h1>
+         <nav>
+            <div class="dropdown">
+               <a href="#" class="dropbtn">About</a>
+               <div class="dropdown-content">
+                  <a href="Overview.html">Overview</a>
+                  <a href="Our Purpose and Value.html">Our Purpose and Values</a>
+                  <a href="Leadership.html">Leadership</a>
+                  <a href="Contact.html">Contact</a>
+                  <a href="Main page.html">Main</a>
+               </div>
+            </div>
+         </nav>
+         <nav>
+            <div class="dropdown">
+               <a href="#" class="dropbtn">Equity Research Articles</a>
+               <div class="dropdown-content">
+                  <a href="Technology.html">Technology</a>
+                  <a href="US Banks.html">US Banks</a>
+                  <a href="Health Care.html">Health Care</a>
+                  <a href="Global Metals and Mining.html">Global Metals and Mining</a> 
+               </div>
+            </div>
+         </nav>
+         <nav> 
+            <a href="FinancialModels.html">Financial Models</a>
+         </nav>
+      </header>
+      <main>
+         <div id="video-container">
+            <video autoplay loop muted id="video-background">
+               <source src="main page video.mov" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+         </div>
+         <div class="welcome-message">
+            <img src="AdobeStock_121910498.jpeg" alt="Welcome Image">
+            <div>
+               <h2>Welcome to EquityEdge Research</h2>
+               <p>At EquityEdge, we're your trusted partner in navigating the intricate landscape of financial markets. Founded on the principles of integrity, expertise, and innovation, we provide comprehensive equity research and analysis to individuals and institutions alike. In addition to our research and analysis services, we also offer Excel financial models to assist in financial planning, YouTube videos covering a wide range of finance topics, and a variety of other articles spanning from discussions on money laundering and cryptocurrency to artificial intelligence and beyond.</p>
+            </div>
+         </div>
+         <!-- Additional welcome message section -->
+         <div class="welcome-message-left">
+            <div>
+               <h2>Our Approach</h2>
+               <p><strong>Comprehensive Insights:</strong></p>
+               <p>We delve deep into diverse equity sectors, offering insightful analysis and actionable recommendations to help you make informed investment decisions.</p>
+               <p><strong>Rigorous Analysis:</strong></p>
+               <p>Our team combines expertise in financial modeling, data analysis, and industry knowledge to deliver unparalleled insights into market trends and opportunities.</p>
+               <p><Strong>Ethical Standards:</Strong></p>
+               <p>We uphold the highest standards of objectivity and integrity in our research, ensuring that all analyses are conducted with transparency and fairness.</p>
+            </div>
+            <img src="our approach.jpeg" alt="Our Approach Image">
+         </div>
+      </main>
+      <footer>
+         <!-- Footer content goes here -->
+      </footer>
+   </body>
+</html>
